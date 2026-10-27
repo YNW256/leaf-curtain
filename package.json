@@ -1,0 +1,27 @@
+{
+  "name": "yemu-jiangling",
+  "version": "1.0.0",
+  "private": true,
+  "description": "《叶幕降临》：第四届纳西妲生日会直播开场前 10 分钟的翻牌墙预热动画（Remotion，1920×1080@60）",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "still": "remotion still src/index.ts",
+    "render": "remotion render src/index.ts",
+    "events": "esbuild src/preshow/sfx_events.ts --bundle --platform=node --outfile=out/sfx_events.cjs --log-level=error && node out/sfx_events.cjs",
+    "slate-events": "esbuild src/standby/slate_sfx_events.ts --bundle --platform=node --outfile=out/slate_events.cjs --log-level=error && node out/slate_events.cjs",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.532",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.532"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.7",
+    "esbuild": "0.28.1",
+    "typescript": "5.9.3"
+  }
+}

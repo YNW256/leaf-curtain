@@ -1,0 +1,10 @@
+node_modules/
+out/
+.DS_Store
+
+# 字体不随仓库分发（见 README「字体」）
+public/fonts/*.ttf
+public/fonts/*.ttc
+public/fonts/*.otf
+public/fonts/*.woff
+public/fonts/*.woff2
